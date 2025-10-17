@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+  }
+
+  /* Contenedor de galería */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  .back-link,.back-link a{
+    color: white!important;
+    margin-top: 20px;
+    text-decoration: none;
+  }
+  /* Media Queries avanzadas */
+  /* Pantallas pequeñas */
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: 1fr; /* Una columna */
+    }
+  }
+
+  /* Pantallas medianas */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+  }
+
+  /* Modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #222;
+      color: #fff;
+    }
+    .gallery img {
+      border: 1px solid #444;
+    }
+  }
+
+  /* Reducir animaciones para accesibilidad */
+  @media (prefers-reduced-motion: reduce) {
+    .gallery img {
+      transition: none;
+    }
+    .gallery img:hover {
+      transform: none;
+    }
+  }
+
+  /* Container Query (experimental, probar en navegadores modernos) */
+  .gallery {
+    container-type: inline-size;
+  }
+
+  @container (max-width: 300px) {
+    .gallery img {
+      height: 100px; /* Ajustar altura en contenedores pequeños */
+    }
+  }

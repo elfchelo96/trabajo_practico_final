@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios JS</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="estilos-globales.css">
+  <link rel="stylesheet" href="estilos-ejercicios.css">
+</head>
+<body>
+  <div id="loading-overlay" class="loading-overlay ">Cargando...</div>
+  <header class="container">
+    <h1 class="title">Ejercicios JavaScript</h1>
+    <p class="small">Prácticas: Generador de paletas, To-Do List y The Simpsons API.</p>
+    <a href="index.html" class="small">← Volver al portafolio</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 class="title">1 — Generador de paleta de colores</h2>
+      <p class="small">Haz clic en el botón para generar una nueva paleta. Haz clic en un cuadro para copiar el hex.</p>
+      <div class="flex-row">
+        <button id="generate-palette" class="button">Generar Nueva Paleta</button>
+        <div id="palette-container" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="card" id="todo-list">
+      <h2 class="title">2 — Lista de Tareas (To-Do)</h2>
+      <div class="flex-row">
+        <input id="task-input" type="text" placeholder="Nueva tarea...">
+        <button id="add-task" class="button">Añadir Tarea</button>
+      </div>
+      <ul id="tasks-ul"></ul>
+    </section>
+
+    <section class="card">
+      <h2 class="title">3 — The Simpsons API</h2>
+      <p class="small">Introduce el ID del episodio (ej: 1) y pulsa "Obtener episodio".</p>
+      <div class="flex-row">
+        <input id="episode-id" type="text" placeholder="ID del episodio (1)">
+        <button id="fetch-episode" class="button">Obtener episodio</button>
+      </div>
+      <div id="simpson-result" style="margin-top:12px"></div>
+    </section>
+  </main>
+
+  <footer class="container small footer_text">
+    <p>Hecho por David Castillo — Portafolio de práctica.</p>
+  </footer>
+
+  <script src="ejercicios.js"></script>
+</body>
+</html>
